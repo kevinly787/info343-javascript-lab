@@ -8,7 +8,9 @@
 */ 
 
 function addition() {
-	// your code goes here!
+	var num1 = document.getElementById('additionInput1').value;
+	var num2 = document.getElementById('additionInput2').value;
+	alert(parseFloat(num1) + parseFloat(num2));
 }
 
 /* --------------------------------------------------------- */
@@ -28,7 +30,21 @@ function addition() {
 */ 
 
 function vowelCounter() {
-	// your code goes here!
+	var vowel = document.getElementById('vowelInput').value;
+	var idx;
+	var numOfVowel = 0;
+
+	for (idx = 0; idx < vowel.length; ++idx){
+		if (vowel[idx] == 'a' || vowel[idx] == 'e' || vowel[idx] == 'i' || vowel[idx] == 'o' || vowel[idx] == 'u') {
+			numOfVowel++;
+		}
+	}
+
+	if (numOfVowel == 1) {
+		document.getElementById('vowelInput').value = 'That sentence has 1 vowels in it.';
+	} else {
+		document.getElementById('vowelInput').value = 'That sentence has ' + numOfVowel + ' vowels in it.';
+	}
 }
 
 /* --------------------------------------------------------- */
@@ -58,8 +74,12 @@ function vowelCounter() {
 	For extra functionality, track the number of guesses the user has made, and print that as part of the result.
 */ 
 
+
+
 function submit() {
-	
+	if (document.getElementById('numberSubmit').value == randomNum) {
+		document.createElement('p').innerHTML = 
+	}
 }
 
 function reset() {
